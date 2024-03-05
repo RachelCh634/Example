@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1 id="start">Hello To My Shop</h1>
+    <h1 id="Time">Date</h1>
+    <h1 id="Words">Words</h1>
+    <h1 id="Text">Text</h1>
+    <script>
+        function Start() {
+            document.getElementById("start").innerHTML = "Good"; // שינוי ערך של אלמנט html 
+        }
+        function Calculate() {
+            let year = 2001 //הכרזה על משתנים
+            let month = 12
+            let day = 3
+            document.getElementById("Time").innerHTML = day + "." + month + "." + year;
+        }
+        const words = ["Good", "Nice", "Sweet"];
+        words.push("Love"); // הוספה
+        words.pop(); // מחיקה 
+        words.sort() // מיון
+        words.shift() // מחיקת איבר ראשון וסידור המערך  
+        words.unshift("Good") // הוספת אלמנט לתחילת המערך 
+        const days = ['Sunday', 'Monday']
+        const concatArray = words.concat(days) // צרוף מערכים
+        function Words() {
+            document.getElementById("Words").innerHTML = concatArray.join(" * ");
+        }
+
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        numbers.forEach(myFunction); // הפעלת פונקציה על כל איברי המערך
+        function myFunction(value) {
+            txt += value + "<br>";
+        }
+        document.getElementById("Text").innerHTML = txt;
+    </script>
+    <button onclick="Start()">Try me</button>
+    <button onclick="Calculate()">See my Date</button>
+    <button onclick="Words()">See my words</button>
+    <!-- מעבר להדפת עמוד -->
+    <button onclick="window.print()">Print this page</button>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
